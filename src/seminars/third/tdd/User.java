@@ -13,8 +13,11 @@ public class User {
 
     }
 
-    //3.6.
     public boolean authenticate(String name, String password) {
+        if (this.name.equals(name) && this.password.equals(password)) {
+            this.isAuthenticate = true;
+            return true;
+        }
         return false;
     }
 
